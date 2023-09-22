@@ -5,11 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostRequest {
+
+    @NotBlank(message = "Neither blank or Null allowed for Post subject.")
+    @Size(max=50, message = "Subject must be less than 50 characters.")
     private String subject;
+
+    @NotBlank(message = "Neither blank or Null allowed for Post content.")
     private String content;
 
 

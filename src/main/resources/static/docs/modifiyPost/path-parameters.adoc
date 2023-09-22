@@ -1,0 +1,8 @@
+.+/api/posts/{id}+
+|===
+|Parameter|Description
+
+|`+id+`
+|ID of the Post you want to Edit
+
+|===

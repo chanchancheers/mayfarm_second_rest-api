@@ -1,0 +1,14 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+Content-Length: 199
+
+{
+  "id" : 29,
+  "subject" : "Enter the subject of the post",
+  "content" : "Fill the content",
+  "createdDate" : "2023-09-21T09:58:26.892128",
+  "modifiedDate" : "2023-09-21T09:58:26.892128"
+}
+----

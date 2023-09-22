@@ -1,0 +1,24 @@
+|===
+|Path|Type|Description
+
+|`+[].id+`
+|`+class java.lang.Integer+`
+|The ID of the Post
+
+|`+[].subject+`
+|`+class java.lang.String+`
+|The Subject of the Post
+
+|`+[].content+`
+|`+class java.lang.String+`
+|The Content of the Post
+
+|`+[].createdDate+`
+|`+class java.time.LocalDateTime+`
+|The Date of Post Created
+
+|`+[].modifiedDate+`
+|`+class java.time.LocalDateTime+`
+|The Date of Post modified
+
+|===

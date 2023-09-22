@@ -1,0 +1,36 @@
+= REST API 개발 과제
+API documentation
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+[[Post-API]]
+
+== Post API
+
+[[Find-Post-by-ID]]
+=== Find a Post by ID
+operation::findPostById[snippets="path-parameters,response-fields,http-request,response-body"]
+
+[[Find-All-Posts]]
+=== Find All Posts
+operation::findAllPosts[snippets="http-request,response-body"]
+
+[[Create-Post]]
+=== Create Post
+operation::createPost[snippets="http-request,request-fields,response-body"]
+
+[[Modify-Post]]
+=== Modify Post
+operation::modifiyPost[snippets="path-parameters,http-request,request-fields,response-body"]
+
+[[Delete-Post]]
+=== Delete Post
+operation::deletePost[snippets="path-parameters,http-request,response-body"]
+
+[[Order-All-Posts]]
+=== Order All Posts
+operation::findAllByOrderKey[snippets="http-request,request-parameters,response-body"]

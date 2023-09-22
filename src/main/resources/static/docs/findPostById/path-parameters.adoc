@@ -1,0 +1,8 @@
+.+/api/posts/{id}+
+|===
+|Parameter|Description
+
+|`+id+`
+|Post ID you want to read.
+
+|===

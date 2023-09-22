@@ -1,0 +1,46 @@
+[source,options="nowrap"]
+----
+[ {
+  "id" : 6,
+  "subject" : "API - Creating Post Test 4",
+  "content" : "Nothing is Impossible",
+  "createdDate" : "2023-09-19T11:31:16.366954",
+  "modifiedDate" : "2023-09-19T11:31:16.366954"
+}, {
+  "id" : 3,
+  "subject" : "API - Creating Post Test 3 - MODIFIED",
+  "content" : "Impossible is Impossible - MODIFIED",
+  "createdDate" : "2023-09-19T11:30:38.399833",
+  "modifiedDate" : "2023-09-19T11:35:39.131"
+}, {
+  "id" : 7,
+  "subject" : "Enter the subject of the post",
+  "content" : "Fill the content",
+  "createdDate" : "2023-09-20T10:25:54.107622",
+  "modifiedDate" : "2023-09-20T10:25:54.107622"
+}, {
+  "id" : 13,
+  "subject" : "API - Creating Post Test, 09.20. 1",
+  "content" : "Nothing is Nothing",
+  "createdDate" : "2023-09-20T16:06:41.006936",
+  "modifiedDate" : "2023-09-20T16:06:41.006936"
+}, {
+  "id" : 14,
+  "subject" : "API - Creating Post Test, 09.20. 2",
+  "content" : "John Doe. 존 달라고",
+  "createdDate" : "2023-09-20T16:09:40.322726",
+  "modifiedDate" : "2023-09-20T16:09:40.322726"
+}, {
+  "id" : 15,
+  "subject" : "API - Creating Post Test, 09.20. 3",
+  "content" : "John, Dollar, 2GB. 존 달라 이기가",
+  "createdDate" : "2023-09-20T16:10:14.092754",
+  "modifiedDate" : "2023-09-20T16:10:14.092754"
+}, {
+  "id" : 5,
+  "subject" : "API - Creating Post Test 3",
+  "content" : "Impossible is Nothing - MODIFIED",
+  "createdDate" : "2023-09-19T11:31:05.417564",
+  "modifiedDate" : "2023-09-20T16:11:25.044"
+} ]
+----

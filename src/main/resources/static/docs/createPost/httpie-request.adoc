@@ -1,0 +1,9 @@
+[source,bash]
+----
+$ echo '{
+  "subject" : "Enter the subject of the post",
+  "content" : "Fill the content"
+}' | http POST 'http://localhost:8080/api/posts' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Accept:application/json'
+----

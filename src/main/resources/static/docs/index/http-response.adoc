@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 168
+
+{"id":6,"subject":"API - Creating Post Test 4","content":"Nothing is Impossible","createdDate":"2023-09-19T11:31:16.366954","modifiedDate":"2023-09-19T11:31:16.366954"}
+----

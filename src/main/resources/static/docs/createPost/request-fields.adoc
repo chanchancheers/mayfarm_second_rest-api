@@ -1,0 +1,12 @@
+|===
+|Path|Type|Description
+
+|`+subject+`
+|`+class java.lang.String+`
+|The Subject of the Post, @NotBlank, Max-Size : 50
+
+|`+content+`
+|`+class java.lang.String+`
+|The Content of the Post, @NotBlank
+
+|===

@@ -1,0 +1,9 @@
+[source,bash]
+----
+$ echo '{
+  "subject" : "Modify subject",
+  "content" : "Modify content."
+}' | http PUT 'http://localhost:8080/api/posts/6' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Accept:application/json'
+----

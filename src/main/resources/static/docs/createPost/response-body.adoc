@@ -1,0 +1,10 @@
+[source,options="nowrap"]
+----
+{
+  "id" : 29,
+  "subject" : "Enter the subject of the post",
+  "content" : "Fill the content",
+  "createdDate" : "2023-09-21T09:58:26.892128",
+  "modifiedDate" : "2023-09-21T09:58:26.892128"
+}
+----

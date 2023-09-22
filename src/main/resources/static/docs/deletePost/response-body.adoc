@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+DELETING POST Success. POST ID : 5
+----

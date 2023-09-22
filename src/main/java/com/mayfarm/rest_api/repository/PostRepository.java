@@ -1,8 +1,11 @@
 package com.mayfarm.rest_api.repository;
 
+import com.mayfarm.rest_api.dto.reponse.PostResponse;
+import com.mayfarm.rest_api.entity.Pagination;
 import com.mayfarm.rest_api.entity.Post;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -18,15 +21,41 @@ import java.util.List;
 public class PostRepository {
 
     private final JdbcTemplate jdbcTemplate;
-    public Post findById(int id) {
+    public List<Post> findById(int id) {
         List<Post> results = jdbcTemplate.query("SELECT * FROM post p WHERE id = ?",
                 this.postRowMapper(), id);
-        return results.isEmpty() ? null : results.get(0);
+        return results.isEmpty() ? null : results;
     }
 
     public List<Post> findAll() {
         List<Post> results = jdbcTemplate.query("SELECT * FROM post",
                 this.postRowMapper());
+        return results.isEmpty() ? null : results;
+    }
+
+    public int countAll(String kw){
+        String query = ("SELECT COUNT(DISTINCT p.*) FROM post p " +
+                "WHERE subject LIKE '%" + kw + "%' " +
+                "or content LIKE '%" + kw + "%'");
+        Integer totalPost = this.jdbcTemplate.queryForObject(query, Integer.class);
+        return (int) totalPost;
+    }
+
+    public List<Post> findAllWithPaging(String orderKey, Pagination pagination, String kw){
+        String query = "SELECT DISTINCT p.* FROM post p " +
+                "WHERE p.subject LIKE '%" + kw + "%' " +
+                "or p.content LIKE '%" + kw + "%' "+ orderKey +
+                " LIMIT " + pagination.getEndIdx() + " OFFSET " + (pagination.getStartIdx()-1);
+
+        List<Post> posts = jdbcTemplate.query(query, this.postRowMapper());
+        return posts;
+    }
+
+    public List<Post> findAllBy(String orderKey, String kw){
+        String query = "SELECT DISTINCT p.* FROM post p " +
+                "WHERE p.subject LIKE '%" + kw + "%' " +
+                "or p.content LIKE '%" + kw + "%' "+ orderKey;
+        List<Post> results = jdbcTemplate.query(query, this.postRowMapper());
         return results.isEmpty() ? null : results;
     }
 
@@ -53,20 +82,19 @@ public class PostRepository {
         post.setCreatedDate(createdDate);
         post.setModifiedDate(modifiedDate);
 
-        log.info("POSTREPOSITORY : CREATING Post {} is succeeded. ", id);
+        log.info("POST CREATION SUCCESS : POST ID {}", id);
         return post;
     }
 
-    public void delete(int id){
-        this.jdbcTemplate.update("DELETE FROM post WHERE id = ?", id);
-        log.info("POSTREPOSITORY : DELETING Post {} is succeeded. ", id);
-        }
+
 
     public void modify(int id, Post post) {
 
         this.jdbcTemplate.update("UPDATE post SET subject = ?, content = ?, modified_date = ? WHERE id = ?",
                 post.getSubject(), post.getContent(), post.getModifiedDate(), id);
-        log.info("POSTREPOSITORY : MODIFYING Post {} is succeeded. ", id);
+    }
+    public void delete(int id){
+        this.jdbcTemplate.update("DELETE FROM post WHERE id = ?", id);
     }
 
     public RowMapper<Post> postRowMapper() {

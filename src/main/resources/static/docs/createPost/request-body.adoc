@@ -1,0 +1,7 @@
+[source,options="nowrap"]
+----
+{
+  "subject" : "Enter the subject of the post",
+  "content" : "Fill the content"
+}
+----

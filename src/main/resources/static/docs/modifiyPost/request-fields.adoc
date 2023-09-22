@@ -1,0 +1,12 @@
+|===
+|Path|Type|Description
+
+|`+subject+`
+|`+class java.lang.String+`
+|The subject you want to edit, @NotBlank, Max-Size : 50
+
+|`+content+`
+|`+class java.lang.String+`
+|The content you want to edit, @NotBlank
+
+|===

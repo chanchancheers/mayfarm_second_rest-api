@@ -4,6 +4,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Getter
@@ -18,6 +20,10 @@ public class Post {
 
 
     //When being called
+
+    public Post() {
+
+    }
 
     @Builder
     public Post(String subject, String content) {

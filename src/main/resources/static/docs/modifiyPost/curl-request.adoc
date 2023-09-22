@@ -1,0 +1,10 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/api/posts/6' -i -X PUT \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Accept: application/json' \
+    -d '{
+  "subject" : "Modify subject",
+  "content" : "Modify content."
+}'
+----
